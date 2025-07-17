@@ -1,2 +1,2 @@
-# dados_tugaquake
-APIs e RSSs do TugaQuake
+# Dados TugaQuake
+Repositório que aloja as APIs e RSSs do TugaQuake.
