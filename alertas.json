@@ -1,23 +1,4 @@
 [
   {
-    "hora": "2025-07-17T21:34:00",
-    "titulo": "Alerta de Sismo Confirmado",
-    "mensagem": "Sismo sentido na região de Lisboa, magnitude preliminar 3.4, sem danos registados.",
-    "zona": "Lisboa",
-    "canal": "TugaQuake"
-  },
-  {
-    "hora": "2025-07-17T19:15:00",
-    "titulo": "Aviso Meteorológico Laranja",
-    "mensagem": "Trovoadas intensas previstas até às 23:59 nos distritos de Viseu e Guarda.",
-    "zona": "Viseu, Guarda",
-    "canal": "IPMA"
-  },
-  {
-    "hora": "2025-07-17T08:00:00",
-    "titulo": "Alerta Precoce de Sismo",
-    "mensagem": "Sismo detetado a norte da ilha de São Miguel, Açores. Possível propagação de abalo fraco.",
-    "zona": "São Miguel, Açores",
-    "canal": "TugaQuake EEWS"
   }
 ]
