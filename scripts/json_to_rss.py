@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import sys, json, datetime, base64
+import sys, json, datetime
 from xml.sax.saxutils import escape
 
 input_file, output_file = sys.argv[1], sys.argv[2]
@@ -14,15 +14,15 @@ for a in alerts:
     desc  = escape(a['mensagem'])
     cat   = escape(a.get('canal',''))
     zone  = escape(a.get('zona',''))
-    items.append(f\"\"\"  <item>
+    items.append(f"""  <item>
     <title>{title}</title>
     <description>{desc} – Zona: {zone}</description>
     <pubDate>{pub}</pubDate>
     <category>{cat}</category>
   </item>
-\"\"\")
+""")
 
-rss = f\"\"\"<?xml version='1.0' encoding='UTF-8'?>
+rss = f"""<?xml version='1.0' encoding='UTF-8'?>
 <rss version='2.0'>
 <channel>
   <title>Alertas TugaQuake</title>
@@ -32,7 +32,7 @@ rss = f\"\"\"<?xml version='1.0' encoding='UTF-8'?>
 {''.join(items)}
 </channel>
 </rss>
-\"\"\"
+"""
 
 with open(output_file, 'w', encoding='utf-8') as f:
     f.write(rss)
