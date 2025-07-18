@@ -9,16 +9,11 @@ with open(input_file, 'r', encoding='utf-8') as f:
 now = datetime.datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S GMT')
 items = []
 for a in alerts:
-    # Filtrar só alertas completos:
-    # se algum destes campos estiver vazio, ignora este alerta
-    if not (a.get('hora') and a.get('titulo') and a.get('mensagem')):
-        continue
-
     pub = datetime.datetime.fromisoformat(a['hora']).strftime('%a, %d %b %Y %H:%M:%S GMT')
-    title = escape(a['titulo'])
-    desc  = escape(a['mensagem'])
-    cat   = escape(a.get('canal',''))
-    zone  = escape(a.get('tópico',''))
+    title = escape(a['título'])
+    desc = escape(a['mensagem'])
+    cat = escape(a.get('canal',''))
+    zone = escape(a.get('topico',''))
     items.append(f"""  <item>
     <title>{title}</title>
     <description>{desc} – Zona: {zone}</description>
