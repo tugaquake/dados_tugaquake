@@ -10,10 +10,10 @@ now = datetime.datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S GMT')
 items = []
 for a in alerts:
     pub = datetime.datetime.fromisoformat(a['hora']).strftime('%a, %d %b %Y %H:%M:%S GMT')
-    title = escape(a['título'])
+    title = escape(a['titulo'])
     desc = escape(a['mensagem'])
     cat = escape(a.get('canal',''))
-    zone = escape(a.get('topico',''))
+    zone = escape(a.get('zona',''))
     items.append(f"""  <item>
     <title>{title}</title>
     <description>{desc} – Zona: {zone}</description>
