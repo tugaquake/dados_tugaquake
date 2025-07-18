@@ -16,9 +16,9 @@ for a in alerts:
 
     pub = datetime.datetime.fromisoformat(a['hora']).strftime('%a, %d %b %Y %H:%M:%S GMT')
     title = escape(a['titulo'])
-    desc  = escape(a['messagem'])
+    desc  = escape(a['mensagem'])
     cat   = escape(a.get('canal',''))
-    zone  = escape(a.get('zona',''))
+    zone  = escape(a.get('tópico',''))
     items.append(f"""  <item>
     <title>{title}</title>
     <description>{desc} – Zona: {zone}</description>
