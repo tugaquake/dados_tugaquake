@@ -4,7 +4,13 @@
   <title>Alertas TugaQuake</title>
   <link>https://tugaquake.github.io/dados_tugaquake/alertas.xml</link>
   <description>Feed de alertas TugaQuake</description>
-  <lastBuildDate>Fri, 18 Jul 2025 20:55:12 GMT</lastBuildDate>
+  <lastBuildDate>Sun, 20 Jul 2025 17:05:15 GMT</lastBuildDate>
+  <item>
+    <title>ONDA DE CALOR</title>
+    <description>ONDA DE CALOR: Uma onda de calor atingirá Portugal a partir de quinta-feira, podendo chegar, em alguns sítios, os 40°C. • Use protetor solar; • Hidrate-se durante o dia; • Evite deslocações desnecessárias, especialmente durante as 11h e as 17h; • Proteja os idosos, crianças e os mais vulneráveis; • Use roupas leves e claras, chapéu e óculos de sol; • Em caso de sintomas de golpe de calor, ligue 112. – Zona: Portugal Continental</description>
+    <pubDate>Sun, 20 Jul 2025 10:41:51 GMT</pubDate>
+    <category>Aviso</category>
+  </item>
 
 </channel>
 </rss>
