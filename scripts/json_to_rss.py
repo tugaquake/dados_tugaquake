@@ -26,7 +26,7 @@ rss = f"""<?xml version='1.0' encoding='UTF-8'?>
 <rss version='2.0'>
 <channel>
   <title>Alertas TugaQuake</title>
-  <link>https://tugaquake.github.io/dados_tugaquake/alertas.xml</link>
+  <link>https://tugaquake0.wordpress.com/alertas/</link>
   <description>Feed de alertas TugaQuake</description>
   <lastBuildDate>{now}</lastBuildDate>
 {''.join(items)}
