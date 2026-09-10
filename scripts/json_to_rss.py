@@ -13,12 +13,12 @@ now = now_dt.strftime('%a, %d %b %Y %H:%M:%S GMT')
 items = []
 
 if not alerts:
-    # Não existem alertas ativos
+    # Não existem alertas
     items.append(f"""  <item>
     <title>🟩 - Nenhum alerta ativo</title>
     <description>Última atualização: {now}</description>
     <pubDate>{now}</pubDate>
-    <category>estado</category>
+    <guid isPermaLink="false">tugaquake-no-active-alerts</guid>
   </item>
 """)
 
