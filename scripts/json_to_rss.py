@@ -3,18 +3,37 @@ import sys, json, datetime
 from xml.sax.saxutils import escape
 
 input_file, output_file = sys.argv[1], sys.argv[2]
+
 with open(input_file, 'r', encoding='utf-8') as f:
     alerts = json.load(f)
 
-now = datetime.datetime.utcnow().strftime('%a, %d %b %Y %H:%M:%S GMT')
+now_dt = datetime.datetime.now(datetime.timezone.utc)
+now = now_dt.strftime('%a, %d %b %Y %H:%M:%S GMT')
+
 items = []
-for a in alerts:
-    pub = datetime.datetime.fromisoformat(a['hora']).strftime('%a, %d %b %Y %H:%M:%S GMT')
-    title = escape(a['titulo'])
-    desc = escape(a['mensagem'])
-    cat = escape(a.get('canal',''))
-    zone = escape(a.get('zona',''))
+
+if not alerts:
+    # Não existem alertas ativos
     items.append(f"""  <item>
+    <title>🟩 - Nenhum alerta ativo</title>
+    <description>Última atualização: {now}</description>
+    <pubDate>{now}</pubDate>
+    <category>estado</category>
+  </item>
+""")
+
+else:
+    # Existem alertas
+    for a in alerts:
+        pub_dt = datetime.datetime.fromisoformat(a['hora'])
+        pub = pub_dt.strftime('%a, %d %b %Y %H:%M:%S GMT')
+
+        title = escape(a['titulo'])
+        desc = escape(a['mensagem'])
+        cat = escape(a.get('canal', ''))
+        zone = escape(a.get('zona', ''))
+
+        items.append(f"""  <item>
     <title>{title}</title>
     <description>{desc} – Zona: {zone}</description>
     <pubDate>{pub}</pubDate>
