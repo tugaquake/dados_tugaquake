@@ -25,6 +25,14 @@ jobs:
 
       - name: Gerar RSS
         run: python scripts/json_to_rss.py alertas.json alertas.xml
+        
+      - name: Verificar RSS gerado
+        run: |
+          echo "=== alertas.json ==="
+          cat alertas.json
+          echo
+          echo "=== alertas.xml ==="
+          cat alertas.xml
 
       - name: Commit RSS
         env:
