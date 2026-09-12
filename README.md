@@ -9,6 +9,7 @@ Contém os alertas emitidos pelo TugaQuake.
 
 #### Formato:
 
+```json
 [
   {
     "hora": "",
@@ -18,6 +19,7 @@ Contém os alertas emitidos pelo TugaQuake.
     "canal": ""
   }
 ]
+```
 
 #### Feed: https://tugaquake.github.io/dados_tugaquake/alertas.json
 
