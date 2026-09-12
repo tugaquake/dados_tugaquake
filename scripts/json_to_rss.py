@@ -16,7 +16,7 @@ if not alerts:
     # Não existem alertas
     items.append(f"""  <item>
     <title>🟩 - Nenhum alerta ativo</title>
-    <description>Última atualização: {now}</description>
+    <title>Última atualização: {now}</title>
     <pubDate>{now}</pubDate>
     <guid isPermaLink="false">tugaquake-no-active-alerts</guid>
   </item>
