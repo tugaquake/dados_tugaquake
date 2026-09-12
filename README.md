@@ -27,7 +27,7 @@ Adaptação do ficheiro JSON para RSS.
 
 #### Feed: https://tugaquake.github.io/dados_tugaquake/alertas.xml
 
-#### Páginas associada: https://tugaquake0.wordpress.com/alertas/
+#### Página associada: https://tugaquake0.wordpress.com/alertas/
 
 ## Utilização
 
